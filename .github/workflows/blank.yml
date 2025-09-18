@@ -1,4 +1,4 @@
-name: Generate Pacman graph
+name: generate-pacman-game-from-github-contribution-grid
 on:
   schedule:
     - cron: '0 0 * * *'  
@@ -9,8 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: P-Pacman/Pacman-Graph-Action@v1
+      - uses: abozanona/pacman-contribution-graph@1.0.10.2
         with:
           username: ${{ github.repository_owner }}
           output_file: output/pacman-contribution-graph.svg
