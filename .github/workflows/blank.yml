@@ -4,12 +4,12 @@ on:
     - cron: '0 0 * * *'  
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: write 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: abozanona/pacman-contribution-graph@1.0.10.2
         with:
-          username: ${{ github.repository_owner }}
-          output_file: output/pacman-contribution-graph.svg
+          github_user_name: Alyyyy88
+          github_token: ${{ secrets.GITHUB_TOKEN }}
